@@ -4,6 +4,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.52.0
   '@typescript-eslint/parser': ^5.52.0
   commitizen: ^4.3.0
+  cz-conventional-changelog: ^3.3.0
   enquirer: 2.3.6
   eslint: ^8.34.0
   husky: ^8.0.3
@@ -16,6 +17,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.52.0_6cfvjsbua5ptj65675bqcn6oza
   '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.52.0_7kw3g6rralp5ps6mg3uyzz6azm
   commitizen: registry.npmmirror.com/commitizen/4.3.0
+  cz-conventional-changelog: registry.npmmirror.com/cz-conventional-changelog/3.3.0
   enquirer: registry.npmmirror.com/enquirer/2.3.6
   eslint: registry.npmmirror.com/eslint/8.34.0
   husky: registry.npmmirror.com/husky/8.0.3
