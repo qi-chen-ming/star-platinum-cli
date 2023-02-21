@@ -35,5 +35,12 @@
     "react",
     "cli"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cross-spawn": "^7.0.3",
+    "kolorist": "^1.7.0",
+    "minimist": "^1.2.8",
+    "prompts": "^2.4.2",
+    "unbuild": "0.8.11"
+  }
 }
