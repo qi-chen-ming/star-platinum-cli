@@ -1,5 +1,5 @@
 15 error Error: Command failed with exit code 1: git remote update
-15 error fatal: unable to access 'https://github.com/qi-chen-ming/star-platinum-cli.git/': Failed to connect to 127.0.0.1 port 31181 after 2029 ms: Connection refused
+15 error fatal: unable to access 'https://github.com/qi-chen-ming/star-platinum-cli.git/': Failed to connect to 127.0.0.1 port 31181 after 2032 ms: Connection refused
 15 error     at makeError (D:\web-齐晨明\脚手架项目\star-platinum-cli\node_modules\.pnpm\registry.npmmirror.com+execa@5.0.0\node_modules\execa\lib\error.js:59:11)
 15 error     at Function.module.exports.sync (D:\web-齐晨明\脚手架项目\star-platinum-cli\node_modules\.pnpm\registry.npmmirror.com+execa@5.0.0\node_modules\execa\index.js:186:17)
 15 error     at Object.execSync (D:\web-齐晨明\脚手架项目\star-platinum-cli\node_modules\.pnpm\registry.npmmirror.com+@lerna+child-process@6.5.1\node_modules\@lerna\child-process\index.js:39:16)
