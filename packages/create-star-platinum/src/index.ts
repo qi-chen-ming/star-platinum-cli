@@ -1,4 +1,3 @@
-console.log('hello qcm,这是src/index.ts文件')
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
