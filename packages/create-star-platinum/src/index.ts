@@ -1,11 +1,13 @@
-console.log('hello 这是src/index.ts文件')
+console.log('hello qcm,这是src/index.ts文件')
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import spawn from 'cross-spawn'
 import minimist from 'minimist'
 import prompts from 'prompts'
-import { blue, cyan, green, red, reset, yellow } from 'kolorist'
+import { blue, cyan, green, red, reset, yellow, bgGreen } from 'kolorist'
+
+import rootPKG from '../package.json'
 
 type ColorFunc = (str: string | number) => string
 
@@ -81,9 +83,17 @@ const renameFiles: Record<string, string | undefined> = {
   _gitignore: '.gitignore'
 }
 
-const defaultTargetDir = 'vite-project'
+const defaultTargetDir = 'my-project'
 
 async function init() {
+  if (argv.v || argv.version) {
+    console.log(
+      bgGreen(` create-star-platinum `),
+      `version is ${rootPKG.version}`
+    )
+    return
+  }
+
   const argTargetDir = formatTargetDir(argv._[0])
   const argTemplate = argv.template || argv.t
 
