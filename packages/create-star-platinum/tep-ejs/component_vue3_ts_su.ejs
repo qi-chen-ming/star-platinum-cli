@@ -1,0 +1,13 @@
+<template>
+  <div class="<%= data.lowerName %>">
+    <h2>
+      <%= data.lowerName %>
+    </h2>
+  </div>
+</template>
+
+<script setup lang="ts" name="<%= data.lowerName %>"></script>
+
+<style scoped>
+  .<%=data.lowerName %> {}
+</style>
