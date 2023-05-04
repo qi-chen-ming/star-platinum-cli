@@ -14,7 +14,7 @@ import { lintFilesArr, react, react_ts, vue, vue_ts } from '../tep-eslint'
 
 // const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-export async function ejsCompile(templatePath, data = {}, options = {}) {
+export async function ejsCompile(templatePath: any, data = {}, options = {}) {
   return new Promise((resolve, reject) => {
     ejs.renderFile(templatePath, { data }, options, (err, str) => {
       if (err) {
@@ -39,7 +39,7 @@ export const mkdirSync = (dirname: string) => {
   }
 }
 
-export const writeFile = (path, content) => {
+export const writeFile = (path: any, content: any) => {
   if (fs.existsSync(path)) {
     console.log('the file already exists~')
     return
@@ -47,7 +47,12 @@ export const writeFile = (path, content) => {
   return fs.promises.writeFile(path, content)
 }
 
-export async function handleEjsToFile(name, dest, template, filename) {
+export async function handleEjsToFile(
+  name: any,
+  dest: any,
+  template: any,
+  filename: any
+) {
   console.log(name, dest, template, filename)
   // 1.获取模块引擎的路径
   const templatePath = path.resolve(__dirname, template)
@@ -175,7 +180,7 @@ export function initConfigFile(force?: boolean) {
   )
 }
 
-export function loadCmd(command, args, text) {
+export function loadCmd(command: any, args: any, text: any) {
   try {
     const loading = ora()
     loading.start(`${text}: 命令执行中...\n`)
