@@ -4,7 +4,6 @@ import { ESLint } from 'eslint'
 import {
   installEslintDep,
   eslintAction,
-  configRoot,
   cwd,
   getConfig,
   parseESLintResult

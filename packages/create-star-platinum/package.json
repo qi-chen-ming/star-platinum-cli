@@ -38,14 +38,18 @@
   "devDependencies": {
     "@types/ejs": "^3.1.2",
     "@types/eslint": "^8.37.0",
+    "@types/prompts": "^2.4.4",
     "cross-spawn": "^7.0.3",
-    "download-git-repo": "^3.0.2",
     "ejs": "^3.1.9",
     "kolorist": "^1.7.0",
     "minimist": "^1.2.8",
-    "ora": "^6.3.0",
     "prompts": "^2.4.2",
     "unbuild": "0.8.11"
   },
-  "gitHead": "d29e22b2429af8b51e6b6d72602495101c508c0c"
+  "gitHead": "d29e22b2429af8b51e6b6d72602495101c508c0c",
+  "dependencies": {
+    "download-git-repo": "^3.0.2",
+    "eslint": "^8.39.0",
+    "ora": "^6.3.0"
+  }
 }

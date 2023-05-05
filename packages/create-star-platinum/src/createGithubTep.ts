@@ -4,6 +4,9 @@ import { promisify } from 'node:util'
 import path from 'node:path'
 import fs from 'node:fs'
 const downloadRepo = promisify(download)
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+// const downloadRepo = require('download-git-repo')
+// import downloadRepo from 'download-git-repo'
 
 import { cwd, emptyDir } from './utils'
 

@@ -1,7 +1,6 @@
 import path from 'node:path'
 import fs from 'node:fs'
-// import { fileURLToPath } from 'node:url'
-// import { red } from 'kolorist'
+import { fileURLToPath } from 'node:url'
 import ejs from 'ejs'
 import spawn from 'cross-spawn'
 import ora from 'ora'
@@ -12,7 +11,7 @@ export const configRoot: string = path.join(cwd, 'sp.config.json')
 
 import { lintFilesArr, react, react_ts, vue, vue_ts } from '../tep-eslint'
 
-// const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export async function ejsCompile(templatePath: any, data = {}, options = {}) {
   return new Promise((resolve, reject) => {
@@ -154,6 +153,14 @@ export function copyDir(srcDir: string, destDir: string) {
     copy(srcFile, destFile)
   }
 }
+interface configSP {
+  componentsPath?: string
+  frame?: string
+  token?: string
+  repoName?: string
+  githubUserName?: string
+  eslint?: any
+}
 
 export function getConfig() {
   // const configRoot: string = path.join(cwd, 'sp.config.json')
@@ -165,14 +172,23 @@ export function getConfig() {
   // }
   if (!fs.existsSync(configRoot)) initConfigFile()
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const loadDir = require(configRoot)
+  // const loadDir = require(configRoot)
+  // const loadDir: configSP = await import(configRoot, {
+  //   assert: {
+  //     type: 'json'
+  //   }
+  // })
   // console.log('loadDir', loadDir)
   // console.log('root', root)
+  const data = fs.readFileSync(configRoot, 'utf8')
+
+  // parse JSON string to JSON object
+  const loadDir = JSON.parse(data)
   return loadDir
 }
 export function initConfigFile(force?: boolean) {
   force
-    ? console.log('正在强制初始化配置文件sp.config.json')
+    ? console.log('正在初始化配置文件sp.config.json')
     : console.log('在此路径上没有找到sp.config.json,开始初始化一个配置文件。')
   fs.copyFileSync(
     path.resolve(__dirname, '../tep-config/sp.config.json'),
@@ -187,6 +203,7 @@ export function loadCmd(command: any, args: any, text: any) {
     const { stdout } = spawn.sync(command, args, {
       // stdio: 'inherit'
     })
+    // console.log('stdout', stdout)
     if (stdout.toString())
       console.log(bgCyan('sp-cli-info '), stdout.toString())
     loading.succeed(`${text}: 命令执行完成`)
