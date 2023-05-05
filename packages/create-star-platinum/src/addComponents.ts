@@ -4,7 +4,7 @@ import prompts from 'prompts'
 import { renderComponent, getConfig, cwd } from './utils'
 
 export default async function (args: any) {
-  console.log('这里是add命令的执行逻辑,create-sp add --name=NavBar ')
+  // console.log('这里是add命令的执行逻辑,create-sp add --name=NavBar ')
   // 1 当前路径下是否有配置文件 如果没有 新建一个 如果有得到componentsPath和frame
   const root = path.join(cwd, 'sp.config.json')
   const initConfig = getConfig()

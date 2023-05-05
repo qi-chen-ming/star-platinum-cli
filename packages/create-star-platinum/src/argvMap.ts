@@ -22,7 +22,7 @@ argvMap.set(['repo'], createRepo)
 argvMap.set(['lint', 'lint --init'], lint)
 
 argvMap.set(['test'], (args: any) => {
-  console.log('得到args', args)
+  // console.log('得到args', args)
   // const { componentsPath } = getConfig()
   console.log('这是测试命令,白金之星脚手架启动成功了！')
   // console.log('配置文件中的componentsPath', componentsPath)

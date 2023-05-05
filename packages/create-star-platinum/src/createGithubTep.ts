@@ -29,7 +29,7 @@ export default async function (args: any) {
     ]
     const result = await prompts(questions)
     const targetDir = path.join(cwd, result.projectName)
-    console.log('targetDir', targetDir)
+    // console.log('targetDir', targetDir)
     console.log('github模板信息是---', result)
     if (fs.existsSync(targetDir)) {
       const result = await prompts({
@@ -39,7 +39,7 @@ export default async function (args: any) {
           'The folder exists, do you need to create a new folder to cover it?',
         initial: true
       })
-      console.log(result)
+      // console.log(result)
       result.value === true ? emptyDir(targetDir) : process.exit(0)
       console.log('删除了原文件夹里全部的内容')
     }

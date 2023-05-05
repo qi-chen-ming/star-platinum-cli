@@ -1,4 +1,4 @@
-console.log('create-sp:正在进行本地调试！')
+// console.log('create-sp:正在进行本地调试！')
 // import fs from 'node:fs'
 // import path from 'node:path'
 // import { fileURLToPath } from 'node:url'
@@ -12,6 +12,6 @@ const args = minimist<{
   t?: string
   template?: string
 }>(process.argv.slice(2), { string: ['_'] })
-console.log('args---', args)
+// console.log('args---', args)
 
 argAction(args)

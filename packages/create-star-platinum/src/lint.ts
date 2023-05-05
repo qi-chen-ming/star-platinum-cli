@@ -38,7 +38,7 @@ export default async function (args: any) {
     }
   }
   if (args._[0] === 'lint' && !args.init) {
-    console.log('create-sp lint的执行逻辑')
+    // console.log('create-sp lint的执行逻辑')
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const config = getConfig()
     if (!config.esLint) {
@@ -60,7 +60,8 @@ export default async function (args: any) {
     const resultText = formatter.format(results)
 
     if (resultText !== '') {
-      console.log('resultText', resultText)
+      // console.log('resultText', resultText)
+      console.log(resultText)
       const eslintResult = parseESLintResult(resultText)
       // console.log('eslintResult', eslintResult)
       console.log(

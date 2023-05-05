@@ -2,7 +2,7 @@ import { red } from 'kolorist'
 import { loadCmd, getConfig } from './utils'
 
 export default function () {
-  console.log('处理create-sp repo 操作的逻辑')
+  // console.log('处理create-sp repo 操作的逻辑')
   // 1 判断本地是否有配置文件 没有就生成 填写配置文件的token repoName githubUserName这三个字段
   const { token, repoName, githubUserName } = getConfig()
   // 2 如果有值为空 就告诉需要填写 如果写的不对就报错
@@ -10,7 +10,7 @@ export default function () {
   // repoName: hello - world - test
   // githubUserName:qi-chen-ming
   const isEmpty = [token, repoName, githubUserName].every((item) => item != '')
-  console.log(token, repoName, githubUserName)
+  // console.log(token, repoName, githubUserName)
   if (!isEmpty) {
     console.log(
       red('您没有在配置文件中设置token、repoName、githubUserName属性的值')

@@ -52,7 +52,7 @@ export async function handleEjsToFile(
   template: any,
   filename: any
 ) {
-  console.log(name, dest, template, filename)
+  // console.log(name, dest, template, filename)
   // 1.获取模块引擎的路径
   const templatePath = path.resolve(__dirname, template)
   const cpnPath = dest + `/${filename}`
