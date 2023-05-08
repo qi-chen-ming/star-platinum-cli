@@ -1,4 +1,4 @@
-import { getConfig } from './utils'
+// import { getConfig } from './utils'
 // import { getConfig } from './index-2'
 
 import getVersion from './getVersion'
@@ -21,13 +21,13 @@ argvMap.set(['initSP', 'initSP -f'], initSP)
 argvMap.set(['repo'], createRepo)
 argvMap.set(['lint', 'lint --init'], lint)
 
-argvMap.set(['test'], (args: any) => {
-  // console.log('得到args', args)
-  // const { componentsPath } = getConfig()
-  console.log('这是测试命令,白金之星脚手架启动成功了！')
-  // console.log('配置文件中的componentsPath', componentsPath)
-  // console.log('' || 1 || 2 || 3)
-})
+// argvMap.set(['test'], (args: any) => {
+//   // console.log('得到args', args)
+//   // const { componentsPath } = getConfig()
+//   // console.log('这是测试命令,白金之星脚手架启动成功了！')
+//   // console.log('配置文件中的componentsPath', componentsPath)
+//   // console.log('' || 1 || 2 || 3)
+// })
 
 function argAction(args: any) {
   //命令行参数映射
@@ -63,7 +63,7 @@ function argAction(args: any) {
         action = key
       }
     })
-    console.log('action', action)
+    // console.log('action', action)
     const result = argvMap.get(action)
     result(args)
   } catch (error) {
