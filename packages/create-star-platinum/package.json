@@ -48,7 +48,7 @@
     "prompts": "^2.4.2",
     "unbuild": "0.8.11"
   },
-  "gitHead": "a6bb5c1dfa015599b1167ace194f65df3b082a23",
+  "gitHead": "616e0b492cded2d77e840313837ddea22eac1d02",
   "dependencies": {
     "download-git-repo": "^3.0.2",
     "eslint": "^8.39.0",
