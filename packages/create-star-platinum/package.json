@@ -1,6 +1,6 @@
 {
   "name": "create-star-platinum",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "type": "module",
   "author": "qi-chen-ming",
   "description": "Using vite's scaffolding tool, you can create vue, react, and other projects.",
@@ -48,7 +48,7 @@
     "prompts": "^2.4.2",
     "unbuild": "0.8.11"
   },
-  "gitHead": "616e0b492cded2d77e840313837ddea22eac1d02",
+  "gitHead": "a6bb5c1dfa015599b1167ace194f65df3b082a23",
   "dependencies": {
     "download-git-repo": "^3.0.2",
     "eslint": "^8.39.0",
